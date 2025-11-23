@@ -1,12 +1,12 @@
 package com.example.circle_connectBackend.models;
 
 
-
 import jakarta.persistence.*;
 import lombok.*;
-import java.time.LocalDateTime;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 @Entity
@@ -28,10 +28,8 @@ public class User {
 
     private String email;
 
-   
 
     private String password;
-
 
 
     private Role role = Role.USER;
@@ -41,7 +39,8 @@ public class User {
 
 
     private String profileImg;
-
+    @Lob
+    private byte[] imageDate;
 
 
     private LocalDateTime createdAt;
